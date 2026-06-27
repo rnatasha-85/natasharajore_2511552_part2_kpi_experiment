@@ -30,3 +30,37 @@ A higher User Conversion Rate means more paying subscribers from the same number
 
 Focusing only on User Conversion Rate could lead the company to use aggressive tactics that encourage users to subscribe without ensuring they receive value from the product. This may result in lower user engagement, higher refund requests, increased support tickets, or poor long-term retention. Therefore, User Conversion Rate should always be evaluated together with guardrail metrics to ensure sustainable growth.
 
+## Data Preparation
+
+The following data quality checks and cleaning steps were completed:
+
+### Missing Values
+- Missing values in device_type (18 records) and traffic_source (24 records) were replaced with "Unknown" to retain all user records for analysis.
+- Missing values in days_to_convert were retained because they represent users who did not convert and are expected in the dataset.
+- Missing values in engagement_score (14 records) were retained, as they represent less than 1% of the dataset and were not expected to materially affect the analysis.
+- No missing values were found in the remaining columns.
+
+### Duplicate User IDs
+- Duplicate user IDs were checked for conflicting information.
+- No duplicate user IDs with conflicting data were found.
+- A total of 16 exact duplicate records (8 duplicated pairs) were identified and removed, resulting in 8 records being deleted from the dataset.
+
+### Group Counts
+- The number of users in each experiment group was verified after the duplicate records were deleted.
+   - Control Group: 690 users
+   - Treatment Group: 710 users
+- The groups were considered sufficiently balanced, and no adjustments were made.
+
+### Invalid Binary Values
+- The binary columns (visited_landing_page, started_trial, completed_onboarding, converted_to_paid, and refund_requested) were validated to ensure they contained only 0 or 1.
+- No invalid binary values were found, so no corrections were required.
+
+### Revenue Outliers
+- Revenue outliers were identified using the Interquartile Range (IQR) method.
+- Four records (Revenue: 2660.21, 3887.98, 6788.95, and 8610.72) were identified as outliers.
+These records were reviewed and retained because they represent valid high-value customer transactions rather than data quality issues.
+
+### Segment Distribution Across Groups
+- Pivot tables were created to compare the distribution of region, device_type, traffic_source, and plan_type across the control and treatment groups.
+- The segment distribution analysis is available in the Analysis sheet of analysis/experiment_analysis.xlsx.
+- This check was performed to review the composition of the experiment groups, and no data changes were made based on the segment distribution.
