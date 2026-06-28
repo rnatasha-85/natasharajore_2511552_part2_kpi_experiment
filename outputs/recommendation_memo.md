@@ -3,7 +3,7 @@
 The company needs to decide whether the new onboarding and activation campaign should be launched to all users. This decision impacts new users, the product team, and the business. The goal is to improve user conversion and early engagement while ensuring that retention and user experience are not negatively affected. The recommendation will be based on A/B test results, comparing the treatment group with the control group across both success and guardrail metrics.
 
 
-## Executive Summary
+### Executive Summary
 
 An A/B test was conducted to evaluate whether the new onboarding and activation campaign should replace the existing onboarding experience. The treatment group showed a significant improvement in the primary success metric, User Conversion Rate, along with higher user engagement and faster conversions. However, the treatment also resulted in a higher support ticket rate and lower average revenue per converted user. Based on these findings, it is recommended to continue testing the new onboarding campaign before launching it to all users.
 
