@@ -36,17 +36,17 @@ A hypothesis test was performed to determine whether the new onboarding campaign
 A [Two-Proportion Z-Test as well] as well as [Two-Sample t-Test Assuming Unequal Variances] were conducted using the User Conversion Rate (Paid Conversion Rate) as the primary metric. A one-tailed test with a significance level of 0.05 was used because the objective was to determine whether the treatment outperformed the control.
 
 ### Test Results
-Control Group Conversion Rate: 3.19 %
-Treatment Group Conversion Rate: 7.04 %
-t-test : T Statistic = -3.290963274 , p-value one-tail = 0.000513079
-Z-test : Z Statistic = 276.4390896921, p-value one-tail = 0
+- Control Group Conversion Rate: 3.19 %
+- Treatment Group Conversion Rate: 7.04 %
+- t-test : T Statistic = -3.290963274 , p-value one-tail = 0.000513079
+- Z-test : Z Statistic = 276.4390896921, p-value one-tail = 0
 
 ### Interpretation
 
 The p-value was compared with the significance level of 0.05.
 
-If p-value < 0.05, the null hypothesis was rejected, indicating that the new onboarding campaign significantly improved the user conversion rate compared to the existing onboarding experience.
-If p-value ≥ 0.05, the null hypothesis was not rejected, indicating that there was insufficient evidence to conclude that the new onboarding campaign improved the user conversion rate.
+- If p-value < 0.05, the null hypothesis was rejected, indicating that the new onboarding campaign significantly improved the user conversion rate compared to the existing onboarding experience.
+- If p-value ≥ 0.05, the null hypothesis was not rejected, indicating that there was insufficient evidence to conclude that the new onboarding campaign improved the user conversion rate.
 
 ### Business Conclusion
 
