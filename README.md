@@ -12,7 +12,21 @@ Before making a decision, the company must monitor risks such as a decrease in u
 
 The recommendation should be based on evidence from the A/B test, including whether the treatment group performs better than the control group on the success metrics while maintaining acceptable guardrail metrics. Only if the improvement is meaningful and the risks remain low should the new campaign be launched to all users.
 
-## North Star Metric: User Conversion Rate (Conversion to Paid Subscription)
+## Dataset Description
+
+The dataset (campaign_experiment_data) contains user-level information collected during the A/B test, including:
+
+- User and experiment information (user ID, signup date, experiment group)
+- User segments (region, device type, traffic source, plan type)
+- User journey metrics (landing page visit, trial start, onboarding completion, paid conversion)
+- Business metrics (30-day revenue, refund requests, support tickets)
+- User behaviour metrics (days to convert, engagement score)
+
+The dataset was reviewed and prepared before analysis by checking missing values, duplicate user IDs, invalid binary values, revenue outliers, experiment group counts, and segment distribution across groups.
+
+## North Star Metric Selected
+
+### User Conversion Rate (Conversion to Paid Subscription)
 
 ### Why this is the North Star metric
 
@@ -101,3 +115,79 @@ Although the treatment group generated slightly higher average revenue per user,
 ### Overall Guardrail Risk Assessment
 
 The treatment group achieved improvements in user conversion and reduced the average time required to convert. However, two guardrail metrics require attention. The higher support ticket rate indicates a potential decline in the onboarding experience, while the lower average revenue per converted user suggests a possible reduction in revenue quality. The refund rate increased only slightly and does not currently indicate a major business risk. These guardrail metrics should be considered alongside the improvement in user conversion before deciding on a full rollout of the new onboarding campaign.
+
+## KPI Tree Summary
+
+The KPI tree was built around User Conversion Rate as the North Star Metric.
+
+Primary KPI drivers:
+- User Acquisition Quality
+- Onboarding Effectiveness
+- User Engagement
+
+Supporting metrics included:
+- Landing Page Visit Rate
+- Trial Start Rate
+- Onboarding Completion Rate
+- Engagement Score
+- Days to Convert
+
+Guardrail metrics evaluated separately included:
+- Refund Rate
+- Support Ticket Rate
+- Average Days to Convert
+- Revenue Quality
+
+### Experiment Analysis Approach
+
+The experiment compared the performance of the Control and Treatment groups using key business metrics.
+
+The analysis included:
+- Overall comparison of experiment metrics
+- Segment-level analysis by Region, Device Type, Traffic Source, and Plan Type
+- Hypothesis testing using User Conversion Rate as the primary metric
+- Evaluation of guardrail metrics before making a business recommendation
+
+### Hypothesis Test Summary
+
+A one-tailed hypothesis test was conducted using User Conversion Rate (Paid Conversion Rate) as the primary metric to determine whether the new onboarding campaign significantly improved conversion compared to the existing onboarding experience.
+
+The hypothesis test results indicated that the treatment group achieved a significantly higher paid conversion rate than the control group, providing evidence that the new onboarding campaign improved user conversion.
+
+### Guardrail Metrics Considered
+
+The following guardrail metrics were evaluated to ensure that improvements in user conversion did not negatively impact the business:
+- Refund Rate
+- Support Ticket Rate
+- Average Days to Convert
+- Revenue Quality (Average Revenue per User and Average Revenue per Converted User)
+
+While the treatment group converted users faster and increased overall revenue per user, it also showed a higher support ticket rate and lower average revenue per converted user. These metrics were considered before making the final recommendation.
+
+### Final Recommendation
+
+Recommendation: Continue Testing
+
+Although the treatment group significantly improved user conversion, engagement, and conversion speed, the increase in support ticket rate and the decline in average revenue per converted user indicate potential business risks. These findings suggest that the onboarding experience should be refined and re-tested before being launched to all users.
+
+### Assumptions and Limitations
+
+Assumptions
+- Users were randomly assigned to the Control and Treatment groups.
+- The experiment groups are representative of the target user population.
+- Revenue and conversion data accurately reflect user behaviour during the experiment period.
+- Missing values retained in days_to_convert represent users who did not convert.
+
+Limitations
+- The analysis is based only on the available experiment data.
+- Long-term user retention and customer lifetime value were not included in the dataset.
+- Revenue outliers were retained because they represented valid customer transactions.
+- Missing engagement scores were excluded only from analyses involving engagement score.
+
+### Screenshots Included
+
+The following supporting screenshots are included with the submission:
+- screenshots/kpi_tree.png
+- screenshots/summary_metrics.png
+- screenshots/segment_analysis.png
+- screenshots/hypothesis_test_output.png
