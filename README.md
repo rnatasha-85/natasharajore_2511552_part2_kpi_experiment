@@ -64,3 +64,40 @@ These records were reviewed and retained because they represent valid high-value
 - Pivot tables were created to compare the distribution of region, device_type, traffic_source, and plan_type across the control and treatment groups.
 - The segment distribution analysis is available in the Analysis sheet of analysis/experiment_analysis.xlsx.
 - This check was performed to review the composition of the experiment groups, and no data changes were made based on the segment distribution.
+
+
+## Guardrail Metrics Evaluation
+
+The guardrail metrics were evaluated to ensure that the improvement in user conversion did not negatively impact the overall user experience or business performance.
+
+### 1. Refund Rate
+Control: 0.00%
+Treatment: 0.42%
+
+Evaluation:
+The treatment group recorded a small increase in refund requests compared to the control group. Although the increase is minimal, it suggests that a few additional users were dissatisfied after converting. At the current level, this does not represent a significant business risk but should continue to be monitored.
+
+### 2. Support Ticket Rate
+Control: 14.78%
+Treatment: 24.79%
+
+Evaluation:
+The support ticket rate increased considerably in the treatment group. This indicates that users required more assistance while using the new onboarding experience. This is the primary guardrail risk, as it may increase customer support workload and indicate usability or onboarding issues.
+
+### 3. Average Days to Convert
+Control: 8.86 days
+Treatment: 6.40 days
+
+Evaluation:
+Users in the treatment group converted more quickly than those in the control group. A shorter conversion time indicates a more effective onboarding process and does not create a business risk.
+
+### 4. Revenue Quality
+Average Revenue per User: Increased from 51.97 to 54.25
+Average Revenue per Converted User: Decreased from 1630.10 to 770.41
+
+Evaluation:
+Although the treatment group generated slightly higher average revenue per user, the average revenue per converted user decreased substantially. This suggests that the increase in conversions was accompanied by lower revenue from each converted customer. This represents a potential risk to revenue quality and should be investigated further.
+
+## Overall Guardrail Risk Assessment
+
+The treatment group achieved improvements in user conversion and reduced the average time required to convert. However, two guardrail metrics require attention. The higher support ticket rate indicates a potential decline in the onboarding experience, while the lower average revenue per converted user suggests a possible reduction in revenue quality. The refund rate increased only slightly and does not currently indicate a major business risk. These guardrail metrics should be considered alongside the improvement in user conversion before deciding on a full rollout of the new onboarding campaign.
