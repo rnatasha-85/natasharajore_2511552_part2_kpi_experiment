@@ -1,0 +1,66 @@
+## Business Problem Summary
+
+The company needs to decide whether the new onboarding and activation campaign should be launched to all users. This decision impacts new users, the product team, and the business. The goal is to improve user conversion and early engagement while ensuring that retention and user experience are not negatively affected. The recommendation will be based on A/B test results, comparing the treatment group with the control group across both success and guardrail metrics.
+
+
+## Executive Summary
+
+An A/B test was conducted to evaluate whether the new onboarding and activation campaign should replace the existing onboarding experience. The treatment group showed a significant improvement in the primary success metric, User Conversion Rate, along with higher user engagement and faster conversions. However, the treatment also resulted in a higher support ticket rate and lower average revenue per converted user. Based on these findings, it is recommended to continue testing the new onboarding campaign before launching it to all users.
+
+### North Star Metric
+
+The North Star Metric for this experiment is User Conversion Rate (Paid Conversion Rate). This metric directly measures the percentage of users who become paying subscribers and aligns with the company's objective of increasing subscription growth and recurring revenue.
+
+### KPI Tree Explanation
+
+The KPI tree was designed around the User Conversion Rate as the North Star Metric. The primary drivers included user acquisition quality, onboarding effectiveness, and user engagement. Supporting metrics such as landing page visit rate, trial start rate, onboarding completion rate, and engagement score were analyzed to understand the factors contributing to user conversion. Guardrail metrics were evaluated separately to ensure that improvements in conversion did not negatively impact business performance.
+
+### Experiment Result Summary
+
+The treatment group outperformed the control group across the primary success metrics.
+
+- Paid Conversion Rate increased from 3.19% to 7.04%.
+- Landing Page Visit Rate increased from 63.62% to 72.39%.
+- Trial Start Rate increased from 25.07% to 29.01%.
+- Onboarding Completion Rate increased from 15.65% to 21.13%.
+- Average Revenue per User increased slightly from 51.97 to 54.25.
+- Average Engagement Score increased from 57.03 to 62.94.
+- Average Days to Convert decreased from 8.86 days to 6.40 days.
+
+Overall, the treatment demonstrated stronger user activation and engagement than the existing onboarding experience.
+
+### Hypothesis Test Interpretation
+
+A one-tailed hypothesis test was performed using the User Conversion Rate as the primary metric. The test results indicated whether the improvement observed in the treatment group was statistically significant. Based on the test outcome, the treatment group demonstrated a significantly higher paid conversion rate than the control group, supporting rejection of the null hypothesis and indicating that the new onboarding campaign improved user conversion.
+
+### Guardrail Analysis
+
+The guardrail metrics identified both positive outcomes and potential risks.
+
+- Refund Rate increased slightly from 0.00% to 0.42%, representing a minor risk that should continue to be monitored.
+- Support Ticket Rate increased from 14.78% to 24.79%, indicating that users required more assistance during or after onboarding. This is the primary business risk identified in the experiment.
+- Average Days to Convert improved from 8.86 to 6.40 days, showing that users converted more quickly under the new onboarding experience.
+- Revenue Quality showed mixed results. While Average Revenue per User increased slightly, Average Revenue per Converted User decreased from 1630.10 to 770.41, suggesting that converted users generated less revenue on average.
+
+### Segment-Level Insight
+
+The segment analysis showed consistent improvement in the primary success metric across all analyzed regions and plan types. Engagement scores also improved across all traffic sources. No significant segment-level decline was observed for the primary metric. However, average revenue per user declined for Desktop users, suggesting that this segment should be investigated further before a full rollout.
+
+### Final Recommendation
+
+Recommendation: Continue Testing
+
+Although the new onboarding campaign significantly improved user conversion, engagement, and conversion speed, the increase in support ticket rate and the decline in average revenue per converted user indicate potential business risks. These issues should be investigated and addressed before deploying the campaign to all users.
+
+### Risks and Limitations
+- Higher support ticket volume may increase customer support costs.
+- Lower average revenue per converted user may reduce long-term revenue quality.
+- The analysis was based on the available experiment data and may not capture long-term customer retention or lifetime value.
+- The experiment did not measure long-term user behavior beyond the available metrics.
+
+### Next Steps
+- Investigate the reasons for the increase in support tickets.
+- Analyze why the average revenue per converted user declined.
+- Review the Desktop user experience to understand the decrease in revenue per user.
+- Refine the onboarding experience to reduce user confusion while maintaining the higher conversion rate.
+- Conduct a follow-up A/B test after implementing improvements before making a full rollout decision.
