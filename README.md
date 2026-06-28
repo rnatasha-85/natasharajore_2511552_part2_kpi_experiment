@@ -98,6 +98,6 @@ Average Revenue per Converted User: Decreased from 1630.10 to 770.41
 Evaluation:
 Although the treatment group generated slightly higher average revenue per user, the average revenue per converted user decreased substantially. This suggests that the increase in conversions was accompanied by lower revenue from each converted customer. This represents a potential risk to revenue quality and should be investigated further.
 
-## Overall Guardrail Risk Assessment
+### Overall Guardrail Risk Assessment
 
 The treatment group achieved improvements in user conversion and reduced the average time required to convert. However, two guardrail metrics require attention. The higher support ticket rate indicates a potential decline in the onboarding experience, while the lower average revenue per converted user suggests a possible reduction in revenue quality. The refund rate increased only slightly and does not currently indicate a major business risk. These guardrail metrics should be considered alongside the improvement in user conversion before deciding on a full rollout of the new onboarding campaign.
